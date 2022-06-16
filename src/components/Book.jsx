@@ -1,19 +1,24 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { delBook } from '../redux/books/books';
 
-const Book = (props) => {
-  const { books } = props;
+const Book = ({ title, author, id }) => {
+  const dispatch = useDispatch();
+  const deleteBook = (bookID) => {
+    dispatch(delBook(bookID));
+  };
   return (
     <div className="book-display">
       <ul className="book-info">
         <li>
-          <p>{books.category}</p>
+          <p>Category</p>
         </li>
         <li>
-          <p>{books.title}</p>
+          <p>{title}</p>
         </li>
         <li>
-          <p>{books.author}</p>
+          <p>{author}</p>
         </li>
       </ul>
       <ul>
@@ -21,7 +26,7 @@ const Book = (props) => {
           <button type="button">Comments</button>
         </li>
         <li>
-          <button type="button">Remove</button>
+          <button type="button" onClick={() => deleteBook(id)}>Remove</button>
         </li>
         <li>
           <button type="button">Edit</button>
