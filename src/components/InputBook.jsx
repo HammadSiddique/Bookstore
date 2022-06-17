@@ -12,9 +12,9 @@ const InputBook = () => {
     e.preventDefault();
     if (title && author) {
       dispatch(addBook({
-        id: books.length + 1,
         title,
         author,
+        id: books.length + 1,
       }));
       setTitle('');
       setAuthor('');
@@ -31,6 +31,8 @@ const InputBook = () => {
           type="text"
           placeholder="Book Title"
           required
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
         />
         <input
           className="author"
@@ -38,8 +40,10 @@ const InputBook = () => {
           type="text"
           placeholder="Author"
           required
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
         />
-        <button type="button" className="add-btn">
+        <button type="submit" className="add-btn">
           Add Book
         </button>
       </form>
