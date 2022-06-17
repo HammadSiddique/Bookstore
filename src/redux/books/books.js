@@ -3,7 +3,19 @@ const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const DEL_BOOK = 'bookstore/books/DEL_BOOK';
 
 // Reducer
-export default function booksReducer(state = [], action) {
+
+const booksList = [{
+  title: 'Dune',
+  author: 'Frank Herbert',
+  id: 1,
+}, {
+  title: 'Dexter',
+  author: 'Jeff Lindsay',
+  id: 2,
+},
+];
+
+export default function booksReducer(state = booksList, action = {}) {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, action.payload];
