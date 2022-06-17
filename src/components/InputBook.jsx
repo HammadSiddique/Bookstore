@@ -5,19 +5,22 @@ import { addBook } from '../redux/books/books';
 const InputBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const dispatch = useDispatch();
   const books = useSelector((state) => state.books);
 
   const formSubmit = (e) => {
     e.preventDefault();
-    if (title && author) {
+    if (title && author && category) {
       dispatch(addBook({
+        item_id: books.length + 1,
         title,
         author,
-        id: books.length + 1,
+        category,
       }));
       setTitle('');
       setAuthor('');
+      setCategory('');
     }
   };
 
@@ -42,6 +45,15 @@ const InputBook = () => {
           required
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
+        />
+        <input
+          className="category"
+          name="category"
+          type="text"
+          placeholder="Cateogry"
+          required
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
         />
         <button type="submit" className="add-btn">
           Add Book

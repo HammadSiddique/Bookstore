@@ -3,16 +3,18 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { delBook } from '../redux/books/books';
 
-const Book = ({ title, author, id }) => {
+const Book = ({
+  id, title, author, category,
+}) => {
   const dispatch = useDispatch();
   const deleteBook = (bookID) => {
     dispatch(delBook(bookID));
   };
   return (
     <div className="book-display">
-      <ul className="book-info">
+      <ul className="book-info" key={id}>
         <li>
-          <p>Category</p>
+          <p>{category}</p>
         </li>
         <li>
           <p>{title}</p>
