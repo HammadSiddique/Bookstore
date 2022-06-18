@@ -26,10 +26,10 @@ const InputBook = () => {
 
   return (
     <div className="form-container">
-      <h3 className="form-heading">Add a new book</h3>
+      <h3 className="form-heading">Add new book</h3>
       <form onSubmit={formSubmit}>
         <input
-          className="title"
+          className="input-title"
           name="title"
           type="text"
           placeholder="Book Title"
@@ -38,7 +38,7 @@ const InputBook = () => {
           onChange={(e) => setTitle(e.target.value)}
         />
         <input
-          className="author"
+          className="input-author"
           name="author"
           type="text"
           placeholder="Author"
@@ -47,7 +47,7 @@ const InputBook = () => {
           onChange={(e) => setAuthor(e.target.value)}
         />
         <input
-          className="category"
+          className="input-category"
           name="category"
           type="text"
           placeholder="Cateogry"

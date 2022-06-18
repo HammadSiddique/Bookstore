@@ -19,6 +19,7 @@ const Books = () => {
           category={book.category}
         />
       ))}
+      <hr />
       <InputBook />
     </div>
   );

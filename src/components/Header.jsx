@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaRegUserCircle } from 'react-icons/fa';
 
 const Header = () => (
-  <header>
-    <h1 className="logo">Bookstore</h1>
-    <nav>
+  <header className="navbar">
+    <h1 className="logo">Bookstore CMS</h1>
+    <nav className="nav-items">
       <Link to="/" className="nav-item">
         Books
       </Link>
@@ -12,6 +13,7 @@ const Header = () => (
         Categories
       </Link>
     </nav>
+    <span><FaRegUserCircle /></span>
   </header>
 );
 
