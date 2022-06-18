@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => (
-  <header>
-    <h1 className="logo">Bookstore</h1>
-    <nav>
+  <header className="navbar">
+    <h1 className="logo">Bookstore CMS</h1>
+    <nav className="nav-items">
       <Link to="/" className="nav-item">
         Books
       </Link>
