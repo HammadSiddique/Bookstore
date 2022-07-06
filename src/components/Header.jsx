@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaRegUserCircle } from 'react-icons/fa';
 
 const Header = () => (
   <header className="navbar">
@@ -13,7 +12,6 @@ const Header = () => (
         Categories
       </Link>
     </nav>
-    <span><FaRegUserCircle /></span>
   </header>
 );
 
