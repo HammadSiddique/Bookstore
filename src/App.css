@@ -52,14 +52,6 @@ body {
   color: var(--text-color2);
 }
 
-.navbar span {
-  color: var(--heading-color);
-  font-size: 1.8rem;
-  justify-self: flex-end;
-  padding-left: 40rem;
-  cursor: pointer;
-}
-
 .main-container {
   display: flex;
   width: 80%;
@@ -297,4 +289,79 @@ hr {
 
 .category-page p {
   padding: 1rem 0;
+}
+
+@media screen and (max-width: 770px) {
+  .main-container {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2.5rem;
+  }
+
+  .book-card {
+    max-width: 300px;
+    min-height: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.5rem;
+    border-radius: 10px;
+  }
+
+  .book-progress {
+    border-left: none;
+    padding-left: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .book-detail {
+    display: grid;
+    place-items: center;
+    gap: 0.6rem;
+  }
+
+  .book-info {
+    text-align: center;
+  }
+
+  .form-heading {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+  }
+
+  .form-container input {
+    width: 90%;
+  }
+
+  .add-btn button {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .navbar {
+    width: fit-content;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .nav-item {
+    font-size: 0.65rem;
+    padding-right: 1rem;
+  }
+
+  .book-card {
+    max-width: 200px;
+  }
 }
