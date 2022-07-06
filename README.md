@@ -8,6 +8,10 @@
 - CSS
 - React
 
+## Live Demo
+
+The [live demo](https://astonishing-kringle-085202.netlify.app/) for the website.
+
 ### Available Scripts
 
 In the project directory, you can run:
